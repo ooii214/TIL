@@ -52,6 +52,7 @@ global Error Handler
 SWR 에서는 전역 에러 핸들링을 SWRConfig의 도움으로 설정 할 수 있다.
 
 전역 에러 핸들링을 세팅하기 위해서는 root 을 감싸면 된다.
+[SWR]
 
 ```
 <SWRConfig value={{
@@ -68,6 +69,8 @@ SWR 에서는 전역 에러 핸들링을 SWRConfig의 도움으로 설정 할 �
 
 react-query 에서도 전역 에러 핸들링 기능을 지원해준다.
 전역 설정에서 query cache의 onError 을 사용해야한다.
+
+[React-query]
 
 ```
 const queryClient = new QueryClient({
