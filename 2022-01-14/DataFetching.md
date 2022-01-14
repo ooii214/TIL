@@ -1,8 +1,15 @@
 # react-query vs swr
 
 https://github.com/tannerlinsley/react-query
+https://react-query.tanstack.com/installation
 
 reactQuery
+
+https://github.com/vercel/swr
+
+https://swr.vercel.app/ko/docs/getting-started
+
+swr
 
 ```
 전역상태 를 건드리지 않고 react 어플리케이션의 data 를 패치(fetch) 캐시(cache)를 하고 update 를한다. 즉, react 의 서버상태를 가져오고, 캐싱하고 , 동기화하고 업데이트 하는 작업을 쉽게 만들어준다.
@@ -20,6 +27,28 @@ saga 에서처럼 비동기로 관련된 성공, 실패 액션을 하나하나 �
 ```
 
 초기세팅
+
+[swr] 1.설치
+
+```
+yarn add swr
+```
+
+```
+import useSWR from 'swr'
+
+function Profile () {
+  const { data, error } = useSWR('/api/user/123', fetcher)
+
+  if (error) return <div>failed to load</div>
+  if (!data) return <div>loading...</div>
+
+  // 데이터 렌더링
+  return <div>hello {data.name}!</div>
+}
+```
+
+[react-query]
 
 1.설치
 
